@@ -1,0 +1,46 @@
+﻿@page
+@model stacktimm.Pages.Admin.Blogs.AddModel
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2 mb-5">
+    <div class="container">
+        <h1>Ajouter un post</h1>
+    </div>
+</div>
+
+<div>
+    <div class="container">
+        <form method="post">
+            <div class="mb-3">
+                <label for="titre" class="fomr-label">Titre</label>
+                <input type="text" class="form-control" id="titre" asp-for="AddPostRequest.Titre" />
+            </div>
+
+            <div class="mb-3">
+                <label for="descrip" class="fomr-label">Description</label>
+                <textarea type="text" class="form-control" id="descrip" asp-for="AddPostRequest.Description"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="lien" class="fomr-label">Url</label>
+                <input type="url" class="form-control" id="lien" asp-for="AddPostRequest.Url" />
+            </div>
+
+            <div class="mb-3">
+                <label for="connaissance" class="fomr-label">Connaissance</label>
+                <input type="text" class="form-control" id="connaissance" name="AddPostRequest.Connaissance" />
+            </div>
+
+            <div class="mb-3">
+                <label for="type" class="fomr-label">Type de Ressource</label>
+                <input type="text" class="form-control" id="type" name="AddPostRequest.type" />
+            </div>
+
+            <div>
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
